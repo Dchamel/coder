@@ -33,23 +33,28 @@ foreach ($coded_array_merged as $letter_coded) {
 
     $letter_array_ready=chopchop_string($letter_coded);
 
-    echo "<PRE>"; // УБРАТЬ
-    print_r($letter_array_ready);
-    print_r($key_array_ready);
-    echo "</PRE>"; // УБРАТЬ
+    //echo "<PRE>"; // УБРАТЬ
+    //print_r($letter_array_ready);
+    //print_r($key_array_ready);
+    //echo "</PRE>"; // УБРАТЬ
+
+    $key_array_ready_2change=$key_array_ready; //дубликат массива ключей
 
     foreach ($letter_array_ready as $letter) {
         $i=0;
-        foreach ($key_array_ready as $key_letter) {
-
+        $ii=-1;
+        foreach ($key_array_ready_2change as $key_letter) {
+            $ii++;
+            //echo $ii."<br>";
             if ($key_letter==$letter) {
                 $letter=NULL;
-                $i++;
-
+                $key_array_ready_2change[$ii]=NULL;
             }
-
+            //echo "<PRE>"; // УБРАТЬ
+            //print_r($key_array_ready_2change);
+            //echo "</PRE>"; // УБРАТЬ
         }
-        echo $i;
+        //echo $i++."дека";
         echo $letter;
 
     }
