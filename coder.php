@@ -20,7 +20,10 @@ function random_rus_letter ($serial_number, $sumbol=NULL, $key_splitted) {
 
 // Тут текст для шифровки
 
-$input_data="Дети Мафусаила книга"; // Прячемое
+$input_data=$_POST["txt4code"]; // Прячемое
+echo "<PRE>";
+print_r($_POST);
+echo "</PRE>";
 $key="Попаболь"; //Ключ
 
 // Разделение текста по символам и удаление пустот
@@ -64,10 +67,6 @@ $i++;
 }
 //Перемешанный массив
 
-echo "<PRE>";
-print_r ($encryption_array);
-echo "</PRE>";
-
 shuffle($encryption_array);
 
 //Вывод результата
@@ -77,10 +76,9 @@ foreach ($encryption_array as $code) {
     echo $code;
 
 }
+//header("Location: ".$_SERVER['HTTP_REFERER']);
+//exit;
 
-echo "<PRE>";
-print_r ($encryption_array);
-echo "</PRE>";
 
 
 
