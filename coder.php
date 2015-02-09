@@ -21,9 +21,9 @@ function random_rus_letter ($serial_number, $sumbol=NULL, $key_splitted) {
 // Тут текст для шифровки
 
 $input_data=$_POST["txt4code"]; // Прячемое
-echo "<PRE>";
-print_r($_POST);
-echo "</PRE>";
+//echo "<PRE>";
+//print_r($_POST);
+//echo "</PRE>";
 $key="Попаболь"; //Ключ
 
 // Разделение текста по символам и удаление пустот
